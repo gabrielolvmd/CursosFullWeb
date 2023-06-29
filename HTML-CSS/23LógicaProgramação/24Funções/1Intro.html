@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <h1>logica </h1>
+
+  <button onclick=criartabuada()>Criar Tabuada</button>
+  <button onclick=limpartabuada()>Limpar Tabuada</button>
+
+  <div id="output"></div>
+
+  <script>
+
+    function criartabuada() {
+      output.innerHTML = '';
+      var num = parseInt(prompt('Digite um número'));
+      var msg = '';
+      for (var i = 0; i <= 100; i++) {
+        msg += `${num} x ${i} = ${num * i} <br>`
+      }
+      output.innerHTML = msg;
+    }
+
+    function limpartabuada() {
+      output.innerHTML = '';
+    }
+
+  </script>
+</body>
+
+</html>

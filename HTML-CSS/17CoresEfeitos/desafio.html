@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Desafio - Cores</title>
+  <style>
+    :root{
+      --primary-color: #5c2626;
+    }
+    body {
+      width: 80vw;
+      margin: 0 auto;
+      padding: 0;
+      font-family: 'poppins', sans-serif;
+      background: var(--primary-color);
+      gap: 1.5rem;
+      display: flex;
+      flex-direction: column;
+    }
+
+    h1 {
+      text-align: center;
+      color: white;
+      font-weight: 300;
+    }
+
+    .container {
+      width: 100%;
+      display: flex;
+      gap: 1.5rem;
+    }
+
+    .card {
+      padding: 2rem 2rem 2rem 3rem;
+      box-sizing: border-box;
+      position: relative;
+      background-color: white;
+      color: #808080;
+      font-weight: 300;
+    }
+
+    .card::before{
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 40px;
+      height: 40px;
+      background-image: linear-gradient(to bottom right, var(--primary-color) 50%, transparent 50%);
+    }
+
+    .card-2::before, .card-3::before{
+      background-image: linear-gradient(to bottom right, var(--primary-color) 50%, #cccccc94 50%);
+    }
+
+    .card-3::before{
+      background-image: linear-gradient(to bottom right, var(--primary-color) 50%, transparent 50%);
+    }
+
+    .card-3::after{
+      content: '';
+      width: 40px;
+      height: 40px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      background-image: linear-gradient(to bottom right, transparent 50%, #e9e7e7 50%);
+      filter: drop-shadow(1px 1px 5px rgb(0, 0, 0,.4));
+    }
+  </style>
+</head>
+
+<body>
+
+  <h1>Post-its</h1>
+
+  <div class="container">
+
+    <div class="card">Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero, provident! Animi debitis doloremque facere.</div>
+
+    <div class="card">Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero, provident! Animi debitis doloremque facere.</div>
+
+    <div class="card">Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero, provident! Animi debitis doloremque facere.</div>   
+
+  </div>
+
+  <div class="container">
+  
+    <div class="card card-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero, provident! Animi debitis doloremque facere.</div>
+  
+    <div class="card card-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero, provident! Animi debitis doloremque facere.</div>
+  
+    <div class="card card-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero, provident! Animi debitis doloremque facere.</div>
+  
+  </div>
+
+  <div class="container">
+  
+    <div class="card card-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero, provident! Animi debitis doloremque facere.</div>
+  
+    <div class="card card-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero, provident! Animi debitis doloremque facere.</div>
+  
+    <div class="card card-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero, provident! Animi debitis doloremque facere.</div>
+  
+  </div>
+</body>
+
+</html>

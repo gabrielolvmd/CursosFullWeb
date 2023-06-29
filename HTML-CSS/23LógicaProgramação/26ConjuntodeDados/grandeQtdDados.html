@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Array de objetos</title>
+</head>
+
+<body>
+
+  <h1>Lógica de Programação</h1>
+
+  <div id="output"></div>
+
+  <script>
+
+    var produtos = [
+      { 'nome': 'caneta', 'preco': 2 },
+      { 'nome': 'lapis', 'preco': 1 },
+      { 'nome': 'caderno', 'preco': 4 }
+    ]
+
+    var msg = '';
+
+    for (var i = 0; i < produtos.length; i++) {
+      msg += produtos[i].nome + '<br>';
+
+    }
+
+    document.querySelector('#output').innerHTML = msg;
+  </script>
+</body>
+
+</html>

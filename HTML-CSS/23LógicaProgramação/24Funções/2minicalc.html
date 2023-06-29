@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    button {
+      padding: 15px;
+      margin-bottom: 15px;
+    }
+
+    html {
+      font-size: 2em;
+    }
+
+    h1 {
+      font-size: 1em;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>logica </h1>
+
+  <button onclick="somar()">+</button>
+  <button onclick="subtrair()">-</button>
+  <button onclick="mult()">x</button>
+  <button onclick="divide()">/</button>
+
+  <div id="output"></div>
+
+  <script>
+
+    var num = parseFloat(prompt('Digite um número'));
+    escreve(num)
+
+    function escreve(n) {
+      var output = document.querySelector('#output');
+      output.innerHTML = n;
+    }
+
+    function somar() {
+      n = parseFloat(prompt('Digite outro valor '));
+      num += n;
+      escreve(num);
+    }
+
+    function subtrair() {
+      n = parseFloat(prompt('Digite outro valor '));
+      num -= n;
+      escreve(num);
+    }
+
+    function mult() {
+      n = parseFloat(prompt('Digite outro valor '));
+      num *= n;
+      escreve(num);
+    }
+
+    function divide() {
+      n = parseFloat(prompt('Digite outro valor '));
+      num /= n;
+      escreve(num);
+    }
+
+
+
+  </script>
+</body>
+
+</html>

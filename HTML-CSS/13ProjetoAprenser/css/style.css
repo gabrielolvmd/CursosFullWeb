@@ -1,0 +1,181 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
+
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: #fed001;
+}
+
+h1,
+h2,
+p {
+  margin: 0;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+h1 {
+  font-size: 4rem;
+  line-height: 1.5em;
+}
+
+img {
+  display: block;
+}
+
+.button {
+  background: #fed001;
+  border: none;
+  padding: 15px 30px;
+  border-radius: 3px;
+  font-weight: 600;
+  font-family: inherit;
+}
+
+.button:hover {
+  cursor: pointer;
+}
+
+.main-container {
+  width: 1660px;
+  margin: 0 auto;
+}
+
+nav {
+  background: #383737;
+  width: 100%;
+  position: sticky;
+  display: flex;
+  justify-content: space-between;
+  box-sizing: border-box;
+  padding: 10px 10%;
+}
+
+nav img {
+  margin-bottom: 15px;
+}
+
+ul {
+  padding: 0;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+li {
+  border: 1px solid #fed001;
+  list-style-type: none;
+  text-transform: uppercase;
+  font-weight: 600;
+  padding: 1.1rem;
+  font-size: 0.7rem;
+}
+
+.section {
+  width: 100%;
+  background: #00000050;
+  display: flex;
+  box-sizing: border-box;
+}
+
+.banner-section {
+  justify-content: space-around;
+  align-items: center;
+  background: linear-gradient(to top, #fffb00, #fff);
+}
+
+.cursos-section {
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  gap: 4rem;
+  padding: 60px;
+  background: #f3f1f1;
+}
+
+.cards-container {
+  display: flex;
+  justify-content: space-around;
+}
+
+.card {
+  flex-basis: 250px;
+  background: #fff;
+  border-radius: 10px;
+  border: 0.5px solid #ccc;
+}
+
+.card h3,
+.card p {
+  display: block;
+  padding: 10px;
+  margin: 0;
+  width: 80%;
+}
+
+.card p {
+  margin-top: -10px;
+  color: #a3a0a0;
+}
+
+.escola-section {
+  height: 550px;
+  background: #003464;
+  justify-content: space-around;
+  align-items: flex-end;
+}
+
+.escola-section p{
+  font-size: 1.2em;
+  line-height: 1.3em;
+  font-weight: 200;
+}
+
+.img-escola-section{
+  width: fit-content;
+  height: fit-content;
+}
+
+.escola-section article {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  color: white;
+  width: 40%;
+}
+
+.contact-section{
+  background: #fff;
+  padding: 50px;
+  gap: 50px;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+}
+
+iframe{
+  width: 100%;
+  height:525px;
+}
+
+address{
+  font-size: 1.1em;
+  font-weight: 500;
+  width: 100%;
+  text-align: right;
+}
+
+footer{
+  text-align: center;
+  color: white;
+  padding: 40px;
+  background: #383737;
+}
+

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CheckBox Lindão</title>
+  <!--EU QUE FIZ-->
+  <style>
+    input[type="checkbox"] {
+      width: 1px;
+      height: 1px;
+      overflow: hidden;
+      opacity: 0;
+      display: inline-block;
+      margin: 0;
+    }
+
+    span {
+      display: inline-block;
+      width: 60px;
+      height: 30px;
+      background: #c5c2c2;
+      border-radius: 20px;
+      position: relative;
+      border: 1px solid transparent;
+    }
+
+    span:before {
+      content: '';
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      background: rgb(240, 238, 238);
+      display: block;
+      margin: 5px 0 0 5px;
+      transition: all .2s ease-in;
+    }
+
+    input[type="checkbox"]:checked+span:before {
+      background: rgb(255, 22, 22);
+      transition: all .2s ease-in;
+      transform: translateX(30px);
+    }
+
+    input[type="checkbox"]:focus + span {
+      border: 1px solid red;
+    }
+
+  </style>
+
+</head>
+
+<body>
+  <h1>estrutura basica</h1>
+
+  <label>
+    <input type="checkbox">
+    <span></span>
+    Esporte
+  </label>
+
+  <label>
+    <input type="checkbox">
+    <span></span>
+    Politica
+  </label>
+
+  <label>
+    <input type="checkbox">
+    <span></span>
+    Educação
+  </label>
+</body>
+
+</html>

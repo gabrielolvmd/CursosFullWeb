@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TryCatch</title>
+</head>
+
+<body>
+  <div id="output"></div>
+  <button onclick="calcular()">Calcular</button>
+
+  <script>
+    function calcular() {
+      try {
+        var n1 = parseFloat(prompt("Digite um lado: "));
+        var n2 = parseFloat(prompt("Digite outro lado: "));
+
+        if (isNaN(n1) || isNaN(n2)) {
+          throw new Error('Digite um valor válido');
+          return;
+        } else if (n1 === undefined || n2 === undefined) {
+          throw new Error('Digite um valor válido');
+          return
+        }
+
+        escreve(n1 * n2);
+        return;
+      } catch (e) {
+        alert(e);
+        return;
+      }
+    }
+
+    function escreve(msg) {
+      document.querySelector('#output').innerHTML = msg;
+    }
+
+    calcular();
+  </script>
+</body>
+
+
+</html>

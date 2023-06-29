@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #4fc0c0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  overflow: hidden;
+}
+
+a{
+  text-decoration: none;
+  color: inherit;
+}
+
+li:hover i{
+  transition: opacity .4s;
+  opacity: 1;
+}
+
+i{
+  color: #acabab;
+  opacity: 0;
+  margin: 3px;
+  transition: opacity .4s;
+}
+
+h1,p,h3 {
+  margin: 0;
+}
+
+p{
+  color: #757373;
+}
+
+.card {
+  background: #fff;
+  width: 480px;
+  height: 400px;
+  overflow: auto;
+  margin: 0;
+  padding: 0px;
+  border-radius: 15px;
+  box-shadow: 3px 3px 10px rgba(0,0,0,.6);
+}
+
+li.contacts {
+  padding: 20px 0;
+  list-style: none;
+  list-style-position: outside;
+  display: flex;
+  align-items: center;
+  border-top:solid 1px #ccc;
+  transition: background-color 0.2s;
+}
+
+li:hover{
+  transition: background-color 0.2s;
+  background-color: #ebebeb;
+}
+
+img{
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  display: inline-block;
+  margin: 2px 20px;
+  padding: 0;
+}
+
+.block{
+  display: inline-block;
+  margin-top: 0;
+}
+
+.icons{
+  display: inline-block;
+  position: absolute;
+  right: 15px;
+}
+
+
