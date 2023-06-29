@@ -35,12 +35,16 @@
         ];
   }
 
+  //CRIOU O ITEM TASKS PARA SER CHAMADO NA FUNÇÃO SAVEDDATA
+  //QUANDO FOI CRIADO ELE PRECISOU SER CONVERTIDO PARA STRING, CASO CONTRÁRIO NÃO SERVIRIA PRA NADA
   function setNewData() {
     localStorage.setItem('tasks', JSON.stringify(arrTasks));
   }
 
   setNewData();
 
+  // RECEBE UM OBJETO E RETORNA UMA LI PREPARADA
+  // PRA INCLUIR NA UL
   function generateLiTask(obj) {
     const li = document.createElement('li');
     const p = document.createElement('p');
@@ -96,6 +100,8 @@
     return li;
   }
 
+  // LIMPA TODA UL E RENDERIZA AS LI'S NOVAMENTE DEPENDENDO
+  // DO RESULTADO DA FUNÇÃO GENERATELITASK
   function renderTasks() {
     ul.innerHTML = '';
     arrTasks.forEach((taskObj) => {
@@ -103,6 +109,7 @@
     });
   }
 
+  // ADICIONA UMA TAREFA (OBJETO) NA ARRAY TASKS
   function addTask(task) {
     arrTasks.push({
       name: task,
@@ -113,6 +120,9 @@
     setNewData();
   }
 
+  // USANDO O DATAACTION PARA PEGAR O ATRIBUTO DO ELEMENTO CLICADO
+  // ATRAVÉS DESSE ATRIBUTO VAMOS VER SE ELE EXISTE NO OBJETO ACTIONS
+  // SE EXISTIR VAMOS CHAMAR A FUNÇÃO OBJ[PROP]() DESSA FORMA.
   function clickedUl(e) {
     const dataAction = e.target.getAttribute('data-action');
     console.log(e.target);
@@ -173,6 +183,8 @@
     }
   }
 
+  //CRIA UM OBJETO NOVO A PARTIR DA PROPRIEDADE NAME QUE É O VALOR DO INPUT DO FORMULARIOE  DEPOIS ATUALIZA A TELA COM RENDERTASKS
+  // DEPOIS LIMPA O VALOR E OCLOCA O FOCUS NO INPUT
   todoAddForm.addEventListener('submit', function (e) {
     e.preventDefault();
     console.log(itemInput.value);
@@ -190,5 +202,6 @@
 
   ul.addEventListener('click', clickedUl);
 
+  // TEM QUE SER CHAMADA PRA PODER RENDERIZAR AS LI'S QUE JA VEM DA ESTRUTURA DE DADOS ARRAY TASKS
   renderTasks();
 })();
