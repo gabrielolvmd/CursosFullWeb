@@ -1,7 +1,20 @@
 function quantoFaltaPara(m, d) {
   const currentDate = new Date();
-  const currentMonth = currentDate.getMonth() + 1;
-  const currentDay = currentDate.getDate();
+  let anoAtual = currentDate.getFullYear();
 
-  return;
+  const birthDate = new Date(anoAtual, m - 1, d);
+  const umDiaEmMilissegundos = 24 * 60 * 60 * 1000;
+
+  const currentMili = currentDate.getTime();
+  let birthMili = birthDate.getTime();
+
+  if (birthMili < currentMili) {
+    birthDate.setFullYear(++anoAtual);
+    birthMili = birthDate.getTime();
+  }
+
+  const diffMili = birthMili - currentMili;
+  const diffDias = Math.ceil(diffMili / umDiaEmMilissegundos);
+
+  return diffDias;
 }
