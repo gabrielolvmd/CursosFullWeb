@@ -70,7 +70,19 @@
     <script>
 
         (function () {
-            
+            const bodyFx = document.querySelector('body')
+
+            window.addEventListener('scroll', function () {
+                let qtdScroll = window.pageYOffset;
+                if (qtdScroll > 300) {
+                    bodyFx.classList.add('fx')
+                } else {
+                    bodyFx.classList.remove('fx')
+                }
+
+            })
+
+
         })()
 
 
