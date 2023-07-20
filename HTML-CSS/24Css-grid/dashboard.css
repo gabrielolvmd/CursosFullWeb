@@ -1,0 +1,27 @@
+:root {
+  --primary-color: #004eda;
+  --grey: #f2f2f8;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+
+  display: grid;
+  grid-template-columns: 240px 1fr;
+  grid-template-rows: 64px auto;
+}
+
+.mainNAv {
+  grid-row: 1 / -1;
+  grid-column: 1 / 2;
+}
+
+.topNav {
+  grid-row: 1 / 2;
+  grid-column: 2 / -1;
+}
+
+main {
+  grid-row: 2 / -1;
+  grid-column: 2 / -1;
+}
